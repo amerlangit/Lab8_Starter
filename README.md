@@ -1,5 +1,9 @@
 # Lab 8 - Starter
-1. sd
-2. fdg
-3. dfg
-4. dfg
+Parners:
+* Alanna Merlan
+* Peicong Wu
+
+1. I would fit my automated tests "1. Within a Github action that runs whenever code is pushed" because although it seems smart to also run tests locally prior to pushing, you want to make sure the tests are running on the most recent updates from everyone. To keep better track of that, it's good to have GitHub actions running those tests on the entire repo after every time someone updates the code. This way, there's no time wasted doing it manually and and any errors after tests will directly point toward the update that caused it.
+2. No. I wouldn't use an end-to-end test to check function output because unit-testing takes care of that (checking for an input X and an output Y). End-to-end testing is primarily for the UI side, so checking if your front-end is looking how it should be. Specifically, I wouldn't use tools like Puppeteer for function output since I shouldn't have to interact with the DOM for that. 
+3. No. I would not use unit testing for this, I would rather use end-to-end testing on a message feature because this seems like it's interacting more with the UI side than within functions. Since we want to interact with the DOM to pull what ends up on the receiver's side, we would use end-to-end tests instead.
+4. Yes. I would use unit-testing to test the length of a messgage because the message will be being passed through parameters of functions. Since I want to be working with a message within a max length, I need to be sure that the user is not inputting an invalid message. This would be done with unit testing (such as returning true or false) so that we don't continue passing a message too long that could throw bugs in our code once we read/write/parse it.
